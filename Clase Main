@@ -1,0 +1,102 @@
+package clases;
+
+import java.util.Scanner;
+
+public class AplicaCPilas {
+
+    static Scanner entrada = new Scanner (System.in);
+    public static CCPilas Pila;
+    
+    public static void main(String[] args) {
+        
+        menuPila(); 
+    }
+    
+    static void creaPila(){
+        int tam;
+        System.out.println("Ingrese Tamaño de la Pila : ");
+        tam = entrada.nextInt();
+        Pila = new CCPilas(tam);
+        System.out.println("pila creada .......n");
+    }
+    
+    public static void menuPila(){
+        int opcion;
+        do{
+            System.out.println("\tMenu de Opciones");
+            System.out.println("================");
+            System.out.println("[1] Crear Pila");
+            System.out.println("=============");
+            System.out.println("[2] Ingresar Datos  - Apilar");
+            System.out.println("[3] Eliminar Datos - Desapilar");
+            System.out.println("[4] Verificar Pila [Vacio]");
+            System.out.println("[5] Verificar Pila [Lleno]");
+            System.out.println("[6] Vaciar Pila");
+            System.out.println("[7] Mostrar Cima de la Pila");
+            System.out.println("[8] Mostrar Tamaño de la Pila");
+            System.out.println("[9] Mostrar Pila");
+            
+            System.out.println("=============");
+            System.out.println("[0] Salir");
+            
+            System.out.println("\nIngrese una opcion : ");
+            opcion = entrada.nextInt();
+            
+            switch (opcion){
+                case 1:
+                    creaPila();
+                break;
+                
+                case 2:
+                    Pila.insertarPila();
+                break;
+                
+                case 3:
+                    Pila.eliminarPila();
+                    System.out.println("");
+                break;
+                
+                case 4:
+                    Pila.verificarEstadoPila();
+                    System.out.println("");
+                break;
+                
+                case 5:
+                    Pila.verificarEstadoPila();
+                    System.out.println("");
+                break;
+                
+                case 6:
+                    Pila.eliminarPila();
+                    System.out.println("");
+                break;
+                
+                case 7:
+                    Pila.mostrarCima();
+                    System.out.println("");
+                break;
+                
+                case 8:
+                    Pila.mostrarTamaño();
+                    System.out.println("");
+                break;
+                
+                case 9:
+                    Pila.mostrarPila();
+                    System.out.println("\n");
+                break;                 
+                
+                case 0:
+                    System.out.println("Saliendo del programa...");
+                    System.exit(0);
+                break;
+                
+                default:
+                    System.out.println("Ingrese otra opcion..");
+                    System.out.println("\n");
+            }
+
+        }while(opcion!=0);
+        
+    }
+}
