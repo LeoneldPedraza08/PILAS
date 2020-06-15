@@ -1,2 +1,2 @@
 # PILAS
-Lo que debes saber sobre PILAS
+Lo basico que necesitas saber sobre PILAS
